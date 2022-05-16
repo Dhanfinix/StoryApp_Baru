@@ -18,8 +18,6 @@ import com.dhandev.storyapp.view.detail.DetailActivity
 
 class storyItemAdapter : PagingDataAdapter<ListStoryItem, storyItemAdapter.StoryViewHolder>(DIFF_CALLBACK){
 
-    private var onItemClickCallback : OnItemClickCallback? = null
-
     override fun onCreateViewHolder(
         viewGroup: ViewGroup,
         viewType: Int
@@ -38,9 +36,6 @@ class storyItemAdapter : PagingDataAdapter<ListStoryItem, storyItemAdapter.Story
         var context = itemView.context
         fun bind(item : ListStoryItem){
             binding.apply {
-//                root.setOnClickListener{
-//                    onItemClickCallback?.onItemClicked(item)
-//                }
                 Glide.with(itemView)
                     .load(item.photoUrl)
                     .transition(DrawableTransitionOptions.withCrossFade())
@@ -65,12 +60,6 @@ class storyItemAdapter : PagingDataAdapter<ListStoryItem, storyItemAdapter.Story
             }
         }
 
-    }
-
-
-
-    interface OnItemClickCallback{
-        fun onItemClicked(data: ListStoryItem)
     }
 
     companion object {
