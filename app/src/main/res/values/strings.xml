@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">StoryApp</string>
+    <string name="signup">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="message_welcome_page">Berbagai pengalaman berharga dengan mudah di StoryApp</string>
+    <string name="title_welcome_page">Selamat datang di StoryApp!</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Masukkan dulu datamu ya</string>
+    <string name="title_login_page">Sudah siap berbagi kebahagiaan?</string>
+    <string name="name">Nama</string>
+    <string name="copyright">© 2021 Ramdhan</string>
+    <string name="message_main_page">Selamat menggunakan StoryApp.</string>
+    <string name="greeting">Halo %1$s,</string>
+    <string name="logout">Keluar</string>
+    <string name="belum_punya_akun_daftar_disini">Belum punya akun?</string>
+    <string name="singUp">Daftar</string>
+    <string name="logo_aplikasi">logo aplikasi</string>
+    <string name="add_new_story">Add New Story</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="upload">Upload</string>
+    <string name="galeri">Galeri</string>
+    <string name="kamera">Kamera</string>
+    <string name="story_picture">Story Picture</string>
+    <string name="story_pengguna">Story pengguna</string>
+    <string name="detail_storyBy">Story oleh : %1$s</string>
+    <string name="detail_createdAt">Dikirim pada : %1$s</string>
+    <string name="enter_email">Masukkan Email</string>
+    <string name="enter_pass">Masukkan Password</string>
+</resources>
