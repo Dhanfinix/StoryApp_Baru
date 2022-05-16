@@ -29,6 +29,11 @@ interface ApiService {
         @Query("size") size : Int
     ) : GetAllStory
 
+    @GET("stories?location=1")
+    fun getStoryBasedLocation(
+        @Header("Authorization") token: String
+    ): Call<GetAllStory>
+
     @Multipart
     @POST("stories")
     fun uploadImage(

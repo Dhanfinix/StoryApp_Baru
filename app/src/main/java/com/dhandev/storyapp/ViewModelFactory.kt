@@ -6,6 +6,7 @@ import com.dhandev.storyapp.model.UserPreference
 import com.dhandev.storyapp.view.add.AddStoryViewModel
 import com.dhandev.storyapp.view.login.LoginViewModel
 import com.dhandev.storyapp.view.main.MainViewModel
+import com.dhandev.storyapp.view.maps.MapsViewModel
 
 class ViewModelFactory(private val pref: UserPreference) : ViewModelProvider.NewInstanceFactory() {
 
@@ -20,6 +21,9 @@ class ViewModelFactory(private val pref: UserPreference) : ViewModelProvider.New
             }
             modelClass.isAssignableFrom(AddStoryViewModel::class.java) -> {
                 AddStoryViewModel(pref) as T
+            }
+            modelClass.isAssignableFrom(MapsViewModel::class.java) -> {
+                MapsViewModel(pref) as T
             }
             else -> throw IllegalArgumentException("Unknown ViewModel class: " + modelClass.name)
         }

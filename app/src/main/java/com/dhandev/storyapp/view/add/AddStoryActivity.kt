@@ -9,6 +9,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
@@ -96,6 +97,7 @@ class AddStoryActivity : AppCompatActivity() {
             }
             btnUpload.setOnClickListener {
                 if (getFile != null && binding.etDesc.text.toString() != "") {
+                    showLoading(true)
                     val file = reduceFileImage(getFile as File)
                     val edDescription = etDesc.text.toString()
                     val description = edDescription.toRequestBody("text/plain".toMediaType())
@@ -114,6 +116,7 @@ class AddStoryActivity : AppCompatActivity() {
                     }
                     viewModel.getUploaded().observe(this@AddStoryActivity){
                         Toast.makeText(this@AddStoryActivity, it.message, Toast.LENGTH_SHORT).show()
+                        showLoading(false)
                         startActivity(Intent(this@AddStoryActivity, MainActivity::class.java))
                         finish()
                     }
@@ -157,6 +160,10 @@ class AddStoryActivity : AppCompatActivity() {
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)
+    }
+
+    private fun showLoading(isLoading: Boolean) {
+        binding.progressBar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 
     companion object {

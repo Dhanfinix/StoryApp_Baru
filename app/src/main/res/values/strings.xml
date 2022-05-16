@@ -30,4 +30,8 @@
     <string name="enter_pass">Masukkan Password</string>
     <string name="coba_lagi">Coba lagi</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="normal_type">Normal</string>
+    <string name="satellite_type">Satellite</string>
+    <string name="terrain_type">Terrain</string>
+    <string name="hybrid_type">Hybrid</string>
 </resources>
