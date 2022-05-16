@@ -18,13 +18,12 @@ import com.dhandev.storyapp.R
 import com.dhandev.storyapp.ViewModelFactory
 import com.dhandev.storyapp.databinding.ActivityMainBinding
 import com.dhandev.storyapp.model.UserPreference
-import com.dhandev.storyapp.model.GetAllStory
-import com.dhandev.storyapp.model.ListStoryItem
 import com.dhandev.storyapp.paging.LoadingStateAdapter
 import com.dhandev.storyapp.paging.PagingViewModel
 import com.dhandev.storyapp.storyItemAdapter
 import com.dhandev.storyapp.view.add.AddStoryActivity
 import com.dhandev.storyapp.view.login.LoginActivity
+import com.dhandev.storyapp.view.maps.MapsActivity
 
 private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "settings")
 
@@ -87,8 +86,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu1) {
+        if (item.itemId == R.id.keluar) {
             mainViewModel.logout()
+        } else {
+            startActivity(Intent(this, MapsActivity::class.java))
         }
         return true
     }

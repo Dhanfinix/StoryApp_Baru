@@ -29,4 +29,5 @@
     <string name="enter_email">Masukkan Email</string>
     <string name="enter_pass">Masukkan Password</string>
     <string name="coba_lagi">Coba lagi</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>
