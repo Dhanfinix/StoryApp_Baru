@@ -20,6 +20,7 @@ import com.dhandev.storyapp.databinding.ActivityMainBinding
 import com.dhandev.storyapp.model.UserPreference
 import com.dhandev.storyapp.model.GetAllStory
 import com.dhandev.storyapp.model.ListStoryItem
+import com.dhandev.storyapp.paging.LoadingStateAdapter
 import com.dhandev.storyapp.paging.PagingViewModel
 import com.dhandev.storyapp.storyItemAdapter
 import com.dhandev.storyapp.view.add.AddStoryActivity
@@ -50,7 +51,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun getPaging() {
         val adapter = storyItemAdapter()
-        binding.rvGituser.adapter = adapter
+        binding.rvGituser.adapter = adapter.withLoadStateFooter(
+            footer = LoadingStateAdapter{
+                adapter.retry()
+            }
+        )
         binding.rvGituser.layoutManager = LinearLayoutManager(this)
         binding.rvGituser.setHasFixedSize(true)
 

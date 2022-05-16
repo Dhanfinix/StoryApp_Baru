@@ -28,4 +28,5 @@
     <string name="detail_createdAt">Dikirim pada : %1$s</string>
     <string name="enter_email">Masukkan Email</string>
     <string name="enter_pass">Masukkan Password</string>
+    <string name="coba_lagi">Coba lagi</string>
 </resources>
